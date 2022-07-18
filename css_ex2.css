@@ -1,0 +1,18 @@
+div section{
+    color: green;
+}
+div > section{
+    color: blue;
+}
+div ~ section {
+    color: orange;
+}
+div + section{
+    color: red;
+}
+#s1 {
+    color: gray;
+}
+@media print {
+    p{display: none;}
+}

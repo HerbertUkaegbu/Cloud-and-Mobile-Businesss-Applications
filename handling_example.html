@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Handling Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        "use strict";
+        window.addEventListener('load', (event) => {
+            window.addEventListener('click',  event => {
+                alert("Window clicked");
+            });
+            window.addEventListener('keydown',  event => {
+                alert("Window pressed");
+            });
+            b.addEventListener('click',  event => {
+                alert("Button clicked");
+            });
+            k.addEventListener('keydown',  event => {
+                alert("Key pressed");
+                //event.stopPropagation();
+            });
+        });     
+    </script>
+</head>
+<body>
+    <form action="javascript:void(0)">
+        <p>
+            <label>Keyboard:
+                <input type="text" id="k">
+            </label>
+        </p>
+        <p>
+            <button id="b">Button</button>
+        </p>
+    </form>
+</body>
+</html>
